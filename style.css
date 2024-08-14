@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    width: 100%;
+    height: 75px;
+    background: rgb(239, 240, 241);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.logo img{
+    width:50px;
+    border-radius: 50px;
+}
+
+.right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right a{
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    color: black;
+    margin: 0 15px;    
+}
+
+.right a:hover{
+    border-bottom: 0.5mm solid rgb(100, 100, 100);
+
+}
+a.primary{
+    background: rgb(8, 119,229);
+    color: white;
+    padding: 7px 20px;
+    border-radius: 5mm;
+}
+
+a.primary:hover{
+    background: rgb(4, 101,199);
+    color: white;
+    border: none;
+}
+
+.hero{
+    width:100%;
+    height:90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 5%;
+    box-sizing: border-box;
+    margin: 100px 0;
+}
+
+.hero-left{
+    flex-grow: 1;
+}
+.title{    
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 50px;
+    margin: 20px 0;
+}
+.caption{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.link{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.link a{
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    text-align: center;
+    border: 0.5mm solid rgb(200,200,200);
+    border-radius: 5mm;
+    padding: 7px 20px;
+}
+.link a.primary{
+    color: white;
+    border: none;
+    margin-right: 20px;
+}
+
+.hero-right img{
+    width: 350px;
+}
+
+.content{
+    width:100%;
+    min-height: 90%;
+    display: grid;
+    place-items: center;
+    margin: 50px 0;
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }    
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+
+.box{
+    width: 80%;
+    background: rgb(232, 240,252);
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 10mm;
+    padding: 30px;
+    margin: 20px 0;
+    box-sizing: border-box;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+
+
+.box-left, .box-right{
+    flex:1;
+    padding: 10px;
+    display: grid;
+    place-items: center;
+}
+
+.box-left img{
+    width: 300px;
+    border-radius: 10mm;
+}
+.box-right{
+    color: rgb(40,42,45);
+}
+.box-title{
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.box-desc{
+    font-size: 14px;
+    width: 100%;
+    text-align: justify;
+}
+footer{
+    width: 100%;
+    background: rgb(245,245,245);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 25px 20px;
+    box-sizing: border-box;
+}
+
+footer img{
+    width:50px;
+    margin-right: 40px;
+}
+
+.footer-left{
+    display: flex;
+    align-items: center;
+}
+
+footer a, .footer-right{
+    font-size: 14px;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    color: rgb(119, 134, 99);
+    margin: 0 10px;
+}
+
+
+@media only screen and (max-width:1000px) {
+    .title{
+        font-size: 5vw;
+    }
+    .hero-right img{
+        width: 35vw;
+    }
+    .caption{
+        font-size: 1.4vw;
+    }
+    .link a{
+        font-size: 1.4vw;
+        padding: 0.6vw 1.65vw;
+    }
+}
+@media only screen and (max-width:700px) {
+    .title{
+        font-size: 45px;
+        text-align: center;
+    }
+    .hero-right{
+        display:none;
+    }
+    .caption{
+        font-size: 14px;
+    }
+    .link a{
+        font-size: 14px;
+        padding: 7px 20px;
+    }
+    .hero-left{
+        display: grid;
+        place-items: center;
+    }
+    .link{
+        justify-content: center;
+    }
+    header{
+        padding: 16px 10px;
+    }
+    header .right a{
+        margin: 0 10px;
+        font-size: 12px;
+    }
+    .logo{
+        width: 80px;
+    }
+    .box-left img{
+        width: 200px;
+    }
+    .box-title{
+        font-size: 30px;
+    }
+    footer{
+        flex-direction: column;
+    }
+}
